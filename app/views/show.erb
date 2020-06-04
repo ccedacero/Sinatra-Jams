@@ -10,5 +10,12 @@
 <p>Name: <%=@artist.name%></p>    
 <p>Age: <%=@artist.age%></p>    
 <p>Bio: <%=@artist.bio%></p>    
+
+<button><a href="/artists/<%=@artist.id%>/edit"> Edit </a></button> 
+
+<form method="post" action="/artists/<%=@artist.id%>">
+<input id="hidden" type="hidden" name="_method" value="delete">
+<input type="submit" value="DELETE">
+</form>
 </body>
 </html>
